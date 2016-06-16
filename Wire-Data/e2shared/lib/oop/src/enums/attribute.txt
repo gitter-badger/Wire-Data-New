@@ -1,0 +1,52 @@
+@name oop/src/enums/attribute
+@persist [OOP_ATTRIBUTE_ABSTRACT_CLASS OOP_ATTRIBUTE_CLASS OOP_ATTRIBUTE_ENUMERATION OOP_ATTRIBUTE_INTERFACE OOP_ATTRIBUTE_NONE OOP_ATTRIBUTE_SEALED_CLASS OOP_ATTRIBUTE_STATIC_CLASS] Enum_OopAttribute:table
+
+if (first())
+{
+    OOP_ATTRIBUTE_NONE           = 0
+    OOP_ATTRIBUTE_ENUMERATION    = 1 << 0
+    OOP_ATTRIBUTE_INTERFACE      = 1 << 1
+    OOP_ATTRIBUTE_CLASS          = 1 << 2
+    OOP_ATTRIBUTE_ABSTRACT_CLASS = 1 << 3
+    OOP_ATTRIBUTE_SEALED_CLASS   = 1 << 4
+    OOP_ATTRIBUTE_STATIC_CLASS   = 1 << 5
+
+    Enum_OopAttribute["__internal", table] = table(
+            "__attributes" = OOP_ATTRIBUTE_ENUMERATION,
+            "__name" = array(
+                    (OOP_ATTRIBUTE_NONE)           = "None",
+                    (OOP_ATTRIBUTE_ENUMERATION)    = "Enumeration",
+                    (OOP_ATTRIBUTE_INTERFACE)      = "Interface",
+                    (OOP_ATTRIBUTE_CLASS)          = "Class",
+                    (OOP_ATTRIBUTE_ABSTRACT_CLASS) = "Abstract Class",
+                    (OOP_ATTRIBUTE_SEALED_CLASS)   = "Sealed Class",
+                    (OOP_ATTRIBUTE_STATIC_CLASS)   = "Static Class"
+                ),
+            "__type" = "enum: EOopAttribute",
+            "__valid" = array(
+                    (OOP_ATTRIBUTE_NONE)           = OOP_ATTRIBUTE_NONE,
+                    (OOP_ATTRIBUTE_ENUMERATION)    = OOP_ATTRIBUTE_ENUMERATION,
+                    (OOP_ATTRIBUTE_INTERFACE)      = OOP_ATTRIBUTE_INTERFACE,
+                    (OOP_ATTRIBUTE_CLASS)          = OOP_ATTRIBUTE_CLASS,
+                    (OOP_ATTRIBUTE_ABSTRACT_CLASS) = OOP_ATTRIBUTE_ABSTRACT_CLASS,
+                    (OOP_ATTRIBUTE_SEALED_CLASS)   = OOP_ATTRIBUTE_SEALED_CLASS,
+                    (OOP_ATTRIBUTE_STATIC_CLASS)   = OOP_ATTRIBUTE_STATIC_CLASS
+                )
+        )
+
+    Enum_OopAttribute[OOP_ATTRIBUTE_NONE,           string] = Enum_OopAttribute["__internal", table]["__name", array][OOP_ATTRIBUTE_NONE,           string]
+    Enum_OopAttribute[OOP_ATTRIBUTE_ENUMERATION,    string] = Enum_OopAttribute["__internal", table]["__name", array][OOP_ATTRIBUTE_ENUMERATION,    string]
+    Enum_OopAttribute[OOP_ATTRIBUTE_INTERFACE,      string] = Enum_OopAttribute["__internal", table]["__name", array][OOP_ATTRIBUTE_INTERFACE,      string]
+    Enum_OopAttribute[OOP_ATTRIBUTE_CLASS,          string] = Enum_OopAttribute["__internal", table]["__name", array][OOP_ATTRIBUTE_CLASS,          string]
+    Enum_OopAttribute[OOP_ATTRIBUTE_ABSTRACT_CLASS, string] = Enum_OopAttribute["__internal", table]["__name", array][OOP_ATTRIBUTE_ABSTRACT_CLASS, string]
+    Enum_OopAttribute[OOP_ATTRIBUTE_SEALED_CLASS,   string] = Enum_OopAttribute["__internal", table]["__name", array][OOP_ATTRIBUTE_SEALED_CLASS,   string]
+    Enum_OopAttribute[OOP_ATTRIBUTE_STATIC_CLASS,   string] = Enum_OopAttribute["__internal", table]["__name", array][OOP_ATTRIBUTE_STATIC_CLASS,   string]
+
+    Enum_OopAttribute[Enum_OopAttribute[OOP_ATTRIBUTE_NONE,           string], number] = OOP_ATTRIBUTE_NONE
+    Enum_OopAttribute[Enum_OopAttribute[OOP_ATTRIBUTE_ENUMERATION,    string], number] = OOP_ATTRIBUTE_ENUMERATION
+    Enum_OopAttribute[Enum_OopAttribute[OOP_ATTRIBUTE_INTERFACE,      string], number] = OOP_ATTRIBUTE_INTERFACE
+    Enum_OopAttribute[Enum_OopAttribute[OOP_ATTRIBUTE_CLASS,          string], number] = OOP_ATTRIBUTE_CLASS
+    Enum_OopAttribute[Enum_OopAttribute[OOP_ATTRIBUTE_ABSTRACT_CLASS, string], number] = OOP_ATTRIBUTE_ABSTRACT_CLASS
+    Enum_OopAttribute[Enum_OopAttribute[OOP_ATTRIBUTE_SEALED_CLASS,   string], number] = OOP_ATTRIBUTE_SEALED_CLASS
+    Enum_OopAttribute[Enum_OopAttribute[OOP_ATTRIBUTE_STATIC_CLASS,   string], number] = OOP_ATTRIBUTE_STATIC_CLASS
+} # End of first()

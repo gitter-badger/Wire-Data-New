@@ -10,5 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="$(MSBuildThisFileDirectory)e2files\updates\spycam\version.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)e2shared\lib\oop\src\enums\attribute.txt" />
   </ItemGroup>
 </Project>
