@@ -16,7 +16,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{1C3C67F4-C0F9-49D1-8305-3FB8A95C66A6}"
 	ProjectSection(SolutionItems) = preProject
 		resources\steam_group.png = resources\steam_group.png
-		resources\steam_group.svg = resources\steam_group.svg
 	EndProjectSection
 EndProject
 Global
